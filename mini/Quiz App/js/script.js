@@ -32,20 +32,20 @@ const quizData = [
 		correct: 'b',
 	},
 ];
-const quiz = document.getElementById("quiz");
+const quiz = document.getElementById('quiz');
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const question = document.getElementById('question');
 const submitBtn = document.getElementById('submit');
-const answerEls = document.querySelectorAll(".answer");
+const answerEls = document.querySelectorAll('.answer');
 let score = 0;
 
 questionNumber = 0;
 
 function updateQuestion() {
-    deselectAnswers();
+	deselectAnswers();
 	question.innerHTML = quizData[questionNumber].question;
 	a_text.innerHTML = quizData[questionNumber].a;
 	b_text.innerHTML = quizData[questionNumber].b;
@@ -53,41 +53,39 @@ function updateQuestion() {
 	d_text.innerHTML = quizData[questionNumber].d;
 }
 
-function getSelected(){
-    answerEls.forEach((answerEl)=>{
-        if(answerEl.checked){
-            answer = answerEl.id;
-        }
-    })
-    return answer;
+function getSelected() {
+	answerEls.forEach((answerEl) => {
+		if (answerEl.checked) {
+			answer = answerEl.id;
+		}
+	});
+	return answer;
 }
 
-
 function deselectAnswers() {
-    answerEls.forEach((answerEl) => {
-        answerEl.checked = false;
-    });
+	answerEls.forEach((answerEl) => {
+		answerEl.checked = false;
+	});
 }
 
 updateQuestion();
 
 submitBtn.addEventListener('click', () => {
-    const answer = getSelected();
-    if(questionNumber >= quizData.length-1){
-        if(answer === quizData[questionNumber].correct){
-            score++;
-        }
-    quiz.innerHTML = `
+	const answer = getSelected();
+	if (questionNumber >= quizData.length - 1) {
+		if (answer === quizData[questionNumber].correct) {
+			score++;
+		}
+		quiz.innerHTML = `
         <h2>You have completed all the questions your score is ${score}/${quizData.length}</h2>
         
          <button onclick="location.reload()">Reload</button>
      `;
-    }else{
-        if(answer === quizData[questionNumber].correct){
-            score++;
-        }
-        questionNumber++;
-        updateQuestion();
-    }
-
+	} else {
+		if (answer === quizData[questionNumber].correct) {
+			score++;
+		}
+		questionNumber++;
+		updateQuestion();
+	}
 });
