@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+/******************************/
+/*  BASIC SETUP  */
+/******************************/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 5rem;
+	background-color: rgb(107, 75, 196);
+	color: aliceblue;
+	font-weight: 500;
+}

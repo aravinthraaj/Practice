@@ -1,0 +1,56 @@
+/******************************/
+/*  BASIC SETUP  */
+/******************************/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	background-color: rgb(71, 71, 71);
+	min-height: 100vh;
+}
+#container {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+.toast {
+	background-color: rgba(194, 153, 202, 0.76);
+	border-radius: 5px;
+	color: #fff;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+button {
+	border: none;
+	font-size: 2rem;
+	background-color: rgb(99, 185, 150);
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 1rem;
+	color: #fff;
+	transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+	transform: translateY(-3px);
+}
+
+button:active {
+	transform: translateY(-1px);
+}

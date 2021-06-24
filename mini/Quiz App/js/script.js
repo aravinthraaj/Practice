@@ -68,22 +68,22 @@ function deselectAnswers() {
 	});
 }
 
-function verifychecked() {
-	let checkoption = false;
-	answerEls.forEach((answerEl) => {
-		if (answerEl.checked === true) {
-			checkoption = true;
-		}
-	});
-	return checkoption;
-}
+// function verifychecked() {
+// 	let checkoption = false;
+// 	answerEls.forEach((answerEl) => {
+// 		if (answerEl.checked === true) {
+// 			checkoption = true;
+// 		}
+// 	});
+// 	return checkoption;
+// }
 updateQuestion();
 
 submitBtn.addEventListener('click', () => {
-	const verifyoption = verifychecked();
-	if (!verifyoption) {
-		alert("You haven't marked any answer !!!");
-	}
+	// const verifyoption = verifychecked();
+	// if (!verifyoption) {
+	// 	alert("You haven't marked any answer !!!");
+	// }
 	const answer = getSelected();
 	if (questionNumber >= quizData.length - 1) {
 		if (answer === quizData[questionNumber].correct) {
