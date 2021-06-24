@@ -1,0 +1,36 @@
+/******************************/
+/*  BASIC SETUP  */
+/******************************/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.heart {
+	position: fixed;
+	font-size: 2rem;
+	top: -3vh;
+	transform: translateY(0);
+	animation: fall 3s linear;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(105vh);
+	}
+}
