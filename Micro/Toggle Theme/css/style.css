@@ -1,0 +1,49 @@
+/******************************/
+/*  BASIC SETUP  */
+/******************************/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	font-size: 1.6rem;
+	background-color: hsl(0, 0%, 90%);
+	transition: all 0.6s ease-in;
+}
+
+h1 {
+	padding: 1rem;
+}
+
+p {
+	padding: 2rem;
+}
+
+input {
+	visibility: hidden;
+}
+
+label {
+	height: 2rem;
+	width: 2rem;
+	background-color: hsl(0, 0%, 30%);
+	display: inline-block;
+	border-radius: 50%;
+	top: 2rem;
+	right: 2rem;
+	position: fixed;
+}
