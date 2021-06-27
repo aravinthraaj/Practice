@@ -4,18 +4,13 @@ let previousSong;
 sounds.forEach((sound) => {
 	const btn = document.createElement('button');
 	btn.classList.add('btn');
-
 	btn.innerText = sound;
 
 	btn.addEventListener('click', () => {
 		// stopSongs();
 		try {
-		
 			document.getElementById(previousSong).pause();
-			console.log('i am at try');
-		} catch (err) {
-
-		} 
+		} catch (err) {}
 
 		document.getElementById(sound).play();
 		previousSong = sound;
