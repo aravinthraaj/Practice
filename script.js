@@ -8,6 +8,7 @@ const filepaths = [
 	'Sound Board',
 	'Toggle Theme',
 	'Toast Notification',
+	'ZoomIn',
 ];
 const container = document.createElement('div');
 container.classList.add('display-link');

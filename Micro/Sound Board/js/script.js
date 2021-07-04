@@ -1,5 +1,5 @@
 const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
-let previousSong;
+let previousSong = undefined;
 
 sounds.forEach((sound) => {
 	const btn = document.createElement('button');
@@ -7,13 +7,24 @@ sounds.forEach((sound) => {
 	btn.innerText = sound;
 
 	btn.addEventListener('click', () => {
+		console.log('i am here');
 		// stopSongs();
-		try {
+		if (previousSong !== undefined) {
 			document.getElementById(previousSong).pause();
-		} catch (err) {}
+			document.getElementById(previousSong).currentTime = 0;
+			previousSong = undefined;
+		} else {
+			if(previousSong )
+			document.getElementById(sound).play();
+			previousSong = sound;
+		}
 
-		document.getElementById(sound).play();
-		previousSong = sound;
+		// if (previousSong === sound) {
+		// 	document.getElementById(sound).pause();
+		// }
+		// try {
+		// 	document.getElementById(previousSong).pause();
+		// } catch (err) {}
 	});
 
 	document.body.appendChild(btn);
